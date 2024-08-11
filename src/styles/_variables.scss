@@ -1,0 +1,29 @@
+:root {
+  /* Text Colors */
+  --color-text-muted: hsl(230, 16%, 44%); /* General text color */
+  --color-text-title: hsl(231, 49%, 17%); /* Titles and headings */
+  --color-text-link: hsl(215, 16%, 18%); /* Navigation links */
+  --color-text-button: hsl(0, 0%, 100%); /* Button text color (white) */
+
+  /* Background Colors */
+  --bg-accent-color: hsl(14, 70%, 60%); /* Accent background color */
+  --bg-primary-button: hsl(42, 92%, 50%); /* Button background color */
+  --bg-gradient-button: linear-gradient(
+    135deg,
+    #ff946d,
+    #ff7d68
+  ); /* Gradient background for primary button */
+
+  /* Button Styles */
+  --padding-button-y: 1.125rem;
+  --padding-button-x: 1.625rem;
+  --radius-button: 0.25rem; /* Border radius for buttons */
+
+  /* Font Sizes */
+  --font-size-base: 1rem; /* Base font size for body text */
+  --font-size-xl: 3.125rem; /* Extra large font size (for h1) */
+  --font-size-lg: 2rem; /* Large font size (for h2) */
+  --font-size-md: 1.5rem; /* Medium font size (for h3) */
+  --font-size-sm: 1.25rem; /* Small font size (for h4, h5) */
+  --font-size-xs: 1rem; /* Extra small font size (for captions, etc.) */
+}
