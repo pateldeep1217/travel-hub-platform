@@ -1,5 +1,5 @@
 import Container from "../common/Container";
-import Logo from "../Logo";
+import Logo from "./Logo";
 import Navigation from "../Navigation";
 import styles from "./Header.module.scss";
 function Header() {
