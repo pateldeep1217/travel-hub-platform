@@ -1,0 +1,16 @@
+/* Volkhov Font Faces */
+@font-face {
+  font-family: "Volkhov";
+  src: url("/fonts/Volkhov/Volkhov-Regular.ttf") format("truetype");
+
+  font-style: regular;
+  font-display: swap;
+}
+
+/* Poppins Font Faces */
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-style: regular;
+  font-display: swap;
+}

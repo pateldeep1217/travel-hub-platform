@@ -1,0 +1,16 @@
+@use "breakpoints" as *;
+
+@mixin respond-to($size, $type: max) {
+  @if map-has-key($breakpoints, $size) {
+    $breakpoint: map-get($breakpoints, $size);
+    @media (#{$type}-width: $breakpoint) {
+      @content;
+    }
+  } @else if type-of($size) == number and not unitless($size) {
+    @media (#{type}-width: $size) {
+      @content;
+    }
+  } @else {
+    @error "The value `#{$size}` is not valid. Ensure it's either a defined breakpoint key (sm,md,lg,xl) or a number with a unit.";
+  }
+}

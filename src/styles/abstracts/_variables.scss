@@ -1,0 +1,27 @@
+:root {
+  --color-text-primary: hsl(231, 49%, 17%);
+  --color-text-muted: #6c757d;
+  --color-text-link: hsl(215, 16%, 18%);
+  --color-text-white: hsl(0, 0%, 100%);
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f8f9fa;
+  --color-accent: hsl(14, 70%, 60%);
+  --color-gradient-orange: linear-gradient(135deg, #ff946d, #ff7d68);
+
+  --container-padding-inline: 2rem;
+  --container-padding-block: 2rem;
+  --container-max-width: 75rem;
+}
+$font-volkhov: "Volkhov", serif;
+$font-poppins: "Poppins", sans-serif;
+$padding-button-y: 1.125rem;
+$padding-button-x: 1.625rem;
+
+$font-size-xs: 1rem;
+$font-size-base: 1rem;
+$font-size-sm: 1.25rem;
+$font-size-md: 1.5rem;
+$font-size-lg: 2rem;
+$font-size-xl: 3.125rem;
+
+$radius: 0.25rem;

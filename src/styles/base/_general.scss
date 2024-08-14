@@ -1,0 +1,36 @@
+@use "../abstracts/" as *;
+
+body {
+  color: var(--color-text-muted);
+  font-size: $font-size-base;
+  font-family: $font-poppins;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-text-primary);
+  font-family: $font-volkhov;
+  line-height: 1;
+}
+
+h1 {
+  font-size: $font-size-xl;
+}
+
+h2 {
+  font-size: $font-size-lg;
+}
+
+h3 {
+  font-size: $font-size-sm;
+}
+
+a {
+  color: var(--color-text-link);
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
