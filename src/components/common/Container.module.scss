@@ -1,0 +1,9 @@
+.container {
+  width: min(
+    100% - var(--container-padding-inline),
+    var(--container-max-width)
+  );
+  border: 1px solid red;
+  margin-inline: auto;
+  margin-block: var(--container-padding-block);
+}
