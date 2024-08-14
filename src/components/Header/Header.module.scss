@@ -1,0 +1,10 @@
+.header {
+  --container-padding-block: 1rem;
+  border: 1px solid red;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
