@@ -1,8 +1,127 @@
-.links {
-  display: flex;
-  gap: 3rem;
+@use "../../styles/abstracts/" as *;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-span.links {
-  margin-inline-start: 2rem;
+.navContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.desktopLinks {
+  display: flex;
+  gap: 1rem;
+
+  @include respond-to(850px) {
+    display: none;
+  }
+}
+
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+
+  @include respond-to(850px) {
+    display: block;
+  }
+}
+
+.mobileMenu {
+  display: none;
+
+  @include respond-to(850px) {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+
+    &.isOpen {
+      left: 0;
+    }
+  }
+}
+
+.mobileMenuContent {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.navLink {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+
+  @include respond-to(850px) {
+    padding: 1rem;
+  }
+}
+
+.overlay {
+  @include respond-to(850px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+}
+
+// Transition classes
+.overlayEnter,
+.menuEnter {
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+}
+.overlayLeave,
+.menuLeave {
+  transition-duration: 200ms;
+  transition-timing-function: ease-in;
+}
+
+.overlayEnterFrom,
+.overlayLeaveTo {
+  opacity: 0;
+}
+.overlayEnterTo,
+.overlayLeaveFrom {
+  opacity: 1;
+}
+
+.menuEnterFrom,
+.menuLeaveTo {
+  opacity: 0;
+  transform: scale(0.95);
+}
+.menuEnterTo,
+.menuLeaveFrom {
+  opacity: 1;
+  transform: scale(1);
 }

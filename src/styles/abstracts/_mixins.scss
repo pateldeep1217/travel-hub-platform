@@ -8,13 +8,34 @@
       @content;
     }
   } @else if type-of($size) == number and not unitless($size) {
-    @media (#{type}-width: $size) {
+    // Properly use $type and apply media query with the correct unit
+    @media screen and (#{$type}-width: $size) {
+      @content;
+    }
+  } @else if type-of($size) == string {
+    // Allow strings like '600px' or '800px' to be passed
+    @media screen and (#{$type}-width: $size) {
       @content;
     }
   } @else {
     @error "The value `#{$size}` is not valid. Ensure it's either a defined breakpoint key (sm,md,lg,xl) or a number with a unit.";
   }
 }
+
+// @mixin respond-to($size, $type: max) {
+//   @if map.has-key($breakpoints, $size) {
+//     $breakpoint: map-get($breakpoints, $size);
+//     @media screen and (#{$type}-width: $breakpoint) {
+//       @content;
+//     }
+//   } @else if type-of($size) == number and not unitless($size) {
+//     @media (#{type}-width: $size) {
+//       @content;
+//     }
+//   } @else {
+//     @error "The value `#{$size}` is not valid. Ensure it's either a defined breakpoint key (sm,md,lg,xl) or a number with a unit.";
+//   }
+// }
 
 @mixin mq($size) {
   @if map.has-key($breakpoints, $size) {
