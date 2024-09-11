@@ -1,9 +1,10 @@
 @use "breakpoints" as *;
+@use "sass:map";
 
 @mixin respond-to($size, $type: max) {
-  @if map-has-key($breakpoints, $size) {
+  @if map.has-key($breakpoints, $size) {
     $breakpoint: map-get($breakpoints, $size);
-    @media (#{$type}-width: $breakpoint) {
+    @media screen and (#{$type}-width: $breakpoint) {
       @content;
     }
   } @else if type-of($size) == number and not unitless($size) {
@@ -12,5 +13,24 @@
     }
   } @else {
     @error "The value `#{$size}` is not valid. Ensure it's either a defined breakpoint key (sm,md,lg,xl) or a number with a unit.";
+  }
+}
+
+@mixin mq($size) {
+  @if map.has-key($breakpoints, $size) {
+    $breakpoint: map-get($breakpoints, $size);
+    @media screen and (min-width: $breakpoint) {
+      @content;
+    }
+  } @else if meta.type-of($size) == number {
+    @if math.is-unitless($size) {
+      @error 'when using a number with @mq() make sure to include a unit';
+    } @else {
+      @media screen and (min-width: $size) {
+        @content;
+      }
+    }
+  } @else {
+    @error 'the keyword #{$size} is not in the $breakpoints map';
   }
 }

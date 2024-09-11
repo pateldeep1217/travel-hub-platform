@@ -1,0 +1,16 @@
+.button {
+  border: none;
+  color: var(--color-text-white);
+  cursor: pointer;
+  padding: var(--padding-button-y) var(--padding-button-x);
+  transition: all 0.2s ease-in-out;
+  border-radius: var(--radius);
+
+  &--primary {
+    background: var(--color-gradient-orange);
+  }
+
+  &--accent {
+    background-color: var(--bg-secondary-button);
+  }
+}

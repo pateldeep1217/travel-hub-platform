@@ -1,0 +1,71 @@
+@use "../../styles/abstracts/" as *;
+.hero {
+  --container-padding-inline: 5rem;
+}
+.heroContent {
+  padding-block-start: 6rem;
+
+  @include respond-to(xl) {
+    padding-block-start: 3rem;
+  }
+
+  @include respond-to(850px) {
+    padding-block-start: 1rem;
+  }
+
+  h1 {
+    @include respond-to(lg) {
+      margin-block: 1rem;
+      font-size: 2.5rem;
+    }
+  }
+  h3 {
+    @include respond-to(xl) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.planeIcon {
+  position: absolute;
+  @include respond-to(xl) {
+    transform: scale(0.6);
+  }
+}
+
+.planeIconTop {
+  top: 1rem;
+  left: 4rem;
+  @include respond-to(xl) {
+    top: 0.5rem;
+    left: 2.5rem;
+  }
+}
+
+.planeIconBottom {
+  top: 4rem;
+  right: -2rem;
+  z-index: 1;
+
+  @include respond-to(xl) {
+    right: -3rem;
+  }
+}
+
+.heroImageContainer {
+  position: relative;
+  z-index: 2;
+}
+
+.heroImage {
+  z-index: 3;
+  position: relative;
+  border: none0;
+  @include respond-to(sm) {
+    display: none;
+  }
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-spacer, 1em);
+}

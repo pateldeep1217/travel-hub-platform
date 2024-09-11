@@ -1,0 +1,29 @@
+@use "../../styles/abstracts/" as *;
+
+.evenColumns {
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: repeat(var(--columns, 2), 1fr);
+
+  //   @include mq(medium) {
+  //     grid-template-columns: 1fr;
+  //     grid-auto-flow: row;
+  //   }
+
+  @include respond-to(md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.columns-1 {
+  --columns: 1;
+}
+.columns-2 {
+  --columns: 2;
+}
+.columns-3 {
+  --columns: 3;
+}
+.columns-4 {
+  --columns: 4;
+}

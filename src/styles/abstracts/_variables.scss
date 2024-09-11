@@ -11,6 +11,13 @@
   --container-padding-inline: 2rem;
   --container-padding-block: 2rem;
   --container-max-width: 75rem;
+
+  --grid-gap: 1rem;
+
+  --padding-button-x: 1.6875rem;
+  --padding-button-y: 1.125rem;
+
+  --radius: 10px;
 }
 $font-volkhov: "Volkhov", serif;
 $font-poppins: "Poppins", sans-serif;
@@ -23,5 +30,3 @@ $font-size-sm: 1.25rem;
 $font-size-md: 1.5rem;
 $font-size-lg: 2rem;
 $font-size-xl: 3.125rem;
-
-$radius: 0.25rem;

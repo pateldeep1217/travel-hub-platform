@@ -1,17 +1,11 @@
-import Button from "./components/Button";
 import Header from "./components/Header";
+import Hero from "./components/Hero/Hero";
 
 function App() {
   return (
     <div>
       <Header />
-      <section id="hero">
-        <h3>Best Destinations Around the World</h3>
-        <h1>Travel, enjoy and live a new and full life</h1>
-        <Button>Find out more</Button>
-        <a href="#play-demo">Play Demo</a>
-      </section>
-
+      <Hero />
       <section id="services">
         <h2>We Offer Best Services</h2>
         <div className="service">
