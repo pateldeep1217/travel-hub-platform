@@ -40,6 +40,11 @@
     top: 0.5rem;
     left: 2.5rem;
   }
+
+  @include respond-to(960px) {
+    top: -1rem;
+    left: 1rem;
+  }
 }
 
 .planeIconBottom {
@@ -48,6 +53,12 @@
   z-index: 1;
 
   @include respond-to(xl) {
+    top: 2rem;
+    right: -2.5rem;
+  }
+
+  @include respond-to(960px) {
+    top: 1rem;
     right: -3rem;
   }
 }

@@ -1,37 +1,13 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero/Hero";
+import ServicesCategory from "./components/ServicesCategory";
 
 function App() {
   return (
     <div>
       <Header />
       <Hero />
-      <section id="services">
-        <h2>We Offer Best Services</h2>
-        <div className="service">
-          <h3>Calculated Weather</h3>
-          <p>
-            Built Wicket longer admire do barton vanity itself do in it.
-            Preferred to sportsmen it engrossed listening. Park gate sell they
-            west hard for the.
-          </p>
-        </div>
-        <div className="service">
-          <h3>Best Flights</h3>
-          <p>
-            Barton vanity itself do in it. Preferd to men it engrossed
-            listening.
-          </p>
-        </div>
-        <div className="service">
-          <h3>Local Events</h3>
-          <p>We deliver outsourced aviation services for military customers.</p>
-        </div>
-        <div className="service">
-          <h3>Customization</h3>
-          <p>Engrossed listening. Park gate sell they west hard for the.</p>
-        </div>
-      </section>
+      <ServicesCategory />
 
       <section id="top-selling">
         <h2>Top Selling</h2>
