@@ -1,16 +1,27 @@
 @use "../../styles/abstracts/" as *;
 
+// .evenColumns {
+//   display: grid;
+//   gap: var(--grid-gap);
+//   grid-template-columns: repeat(var(--columns, 2), 1fr);
+
+//   @include respond-to(md) {
+//     grid-template-columns: 1fr;
+//   }
+// }
+
 .evenColumns {
   display: grid;
   gap: var(--grid-gap);
-  grid-template-columns: repeat(var(--columns, 2), 1fr);
+  grid-template-columns: repeat(var(--columns, 4), 1fr); // Default to 4 columns
 
-  //   @include mq(medium) {
-  //     grid-template-columns: 1fr;
-  //     grid-auto-flow: row;
-  //   }
-
+  // On medium screens, adjust to 2 columns
   @include respond-to(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  // On small screens, collapse to 1 column
+  @include respond-to(sm) {
     grid-template-columns: 1fr;
   }
 }

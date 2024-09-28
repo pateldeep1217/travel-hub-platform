@@ -1,28 +1,36 @@
 @use "../../styles/abstracts/" as *;
-.hero {
-  --container-padding-inline: 5rem;
-}
+
 .heroContent {
-  padding-block-start: 6rem;
+  margin-block: 5rem;
 
-  @include respond-to(xl) {
-    padding-block-start: 3rem;
+  @include respond-to(1140px) {
+    margin-block: 2rem;
   }
+}
 
+.overrideGrid {
   @include respond-to(850px) {
-    padding-block-start: 1rem;
+    grid-template-columns: 1fr; // Override the grid for 850px and below
   }
+}
 
-  h1 {
-    @include respond-to(lg) {
-      margin-block: 1rem;
-      font-size: 2.5rem;
-    }
+h3 {
+  margin-block-end: 24px;
+  @include respond-to(1140px) {
+    margin-block-end: 15px;
   }
-  h3 {
-    @include respond-to(xl) {
-      font-size: 1rem;
-    }
+}
+
+h1 {
+  margin-block-end: 34px;
+  @include respond-to(1140px) {
+    margin-block-end: 15px;
+  }
+}
+p {
+  margin-block-end: 30px;
+  @include respond-to(1140px) {
+    margin-block-end: 15px;
   }
 }
 
@@ -30,6 +38,9 @@
   position: absolute;
   @include respond-to(xl) {
     transform: scale(0.6);
+  }
+  @include respond-to(850px) {
+    display: none;
   }
 }
 
@@ -42,8 +53,8 @@
   }
 
   @include respond-to(960px) {
-    top: -1rem;
-    left: 1rem;
+    top: 1rem;
+    left: 2rem;
   }
 }
 
@@ -58,12 +69,13 @@
   }
 
   @include respond-to(960px) {
-    top: 1rem;
+    top: 4rem;
     right: -3rem;
   }
 }
 
 .heroImageContainer {
+  overflow: hidden;
   position: relative;
   z-index: 2;
 }
@@ -71,12 +83,12 @@
 .heroImage {
   z-index: 3;
   position: relative;
-  border: none0;
-  @include respond-to(sm) {
+  border: none;
+  @include respond-to(980px) {
+    top: 3rem;
+  }
+
+  @include respond-to(850px) {
     display: none;
   }
-}
-
-.flow > *:where(:not(:first-child)) {
-  margin-top: var(--flow-spacer, 1em);
 }

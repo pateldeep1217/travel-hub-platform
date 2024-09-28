@@ -4,6 +4,7 @@ body {
   color: var(--color-text-muted);
   font-size: $font-size-base;
   font-family: $font-poppins;
+  line-height: 1.5;
 }
 
 h1,
@@ -11,7 +12,8 @@ h2,
 h3 {
   color: var(--color-text-primary);
   font-family: $font-volkhov;
-  line-height: 1;
+  letter-spacing: 1px;
+  line-height: 1.2;
 }
 
 h1 {

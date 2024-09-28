@@ -10,7 +10,7 @@ function Hero() {
   return (
     <section className={styles.hero}>
       <Container>
-        <EvenColumns columns={2}>
+        <EvenColumns columns={2} className={styles.overrideGrid}>
           <div className={clsx(styles.heroContent, styles.flow)}>
             <h3>Best Destinations Around The World</h3>
             <h1>

@@ -24,9 +24,9 @@ $font-poppins: "Poppins", sans-serif;
 $padding-button-y: 1.125rem;
 $padding-button-x: 1.625rem;
 
-$font-size-xs: 1rem;
+$font-size-xs: clamp(0.875rem, 1rem + 0.5vw, 1rem);
 $font-size-base: 1rem;
-$font-size-sm: 1.25rem;
-$font-size-md: 1.5rem;
-$font-size-lg: 2rem;
-$font-size-xl: 3.125rem;
+$font-size-sm: clamp(1rem, 1.25rem + 1vw, 1.5rem);
+$font-size-md: clamp(1.25rem, 1.5rem + 1vw, 2rem);
+$font-size-lg: clamp(1.5rem, 2rem + 1vw, 2rem);
+$font-size-xl: clamp(2rem, 3.125rem + 2vw, 3.125rem);
