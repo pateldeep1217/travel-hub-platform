@@ -1,0 +1,33 @@
+.destination {
+  position: relative;
+  margin-bottom: 2rem;
+  max-width: 314px;
+}
+
+.destinationInfo {
+  position: absolute;
+  bottom: -10px;
+  background-color: #fff;
+  width: 100%;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Adjust values as needed
+}
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.destinationImg {
+}
+
+.destinationPrice {
+}
+
+.tripDetails {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+  font-size: 0.8rem;
+}

@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero/Hero";
 import ServicesCategory from "./components/ServicesCategory";
+import TopDestination from "./components/TopDestination";
 
 function App() {
   return (
@@ -8,22 +9,7 @@ function App() {
       <Header />
       <Hero />
       <ServicesCategory />
-
-      <section id="top-selling">
-        <h2>Top Selling</h2>
-        <div className="destination">
-          <h3>Rome, Italy</h3>
-          <p>$5,42k</p>
-        </div>
-        <div className="destination">
-          <h3>London, UK</h3>
-          <p>$4.2k</p>
-        </div>
-        <div className="destination">
-          <h3>Full Europe</h3>
-          <p>$15k</p>
-        </div>
-      </section>
+      <TopDestination />
 
       <section id="easy-fast">
         <h2>Easy and Fast</h2>

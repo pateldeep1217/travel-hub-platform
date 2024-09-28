@@ -1,22 +1,37 @@
+import Container from "../common/Container";
+import EvenColumns from "../common/EvenColumns";
+import Destination from "./Destination";
 import styles from "./TopDestination.module.scss";
-import { IconLocation } from "@tabler/icons-react";
 
 function TopDestination() {
   return (
     <section className={styles.destinations}>
-      <h4>Top Selling</h4>
-      <h2>Top Destinations</h2>
-      <div className={styles.destination}>
-        <img src="/destination-italy" alt="" />
-        <p>Rome, Italy</p>
-        <p>$5k</p>
-        <p>
-          <span>
-            <IconLocation />
-          </span>
-          10 Days Trip
-        </p>
-      </div>
+      <Container className={styles.container}>
+        <div className={styles.headings}>
+          <h4>Top Selling</h4>
+          <h2>Top Destinations</h2>
+        </div>
+        <EvenColumns columns={3}>
+          <Destination
+            name="Rome, Italy"
+            price="$5k"
+            image="/destination-italy.png"
+            tripDetails="7 Days Trip"
+          />
+          <Destination
+            name="London, UK"
+            price="$4.2k"
+            image="/destination-uk.png"
+            tripDetails="14 Days Trip"
+          />
+          <Destination
+            name="Full Europe"
+            price="$15k"
+            image="/destination-europe.png"
+            tripDetails="28 Days Trip"
+          />
+        </EvenColumns>
+      </Container>
     </section>
   );
 }
