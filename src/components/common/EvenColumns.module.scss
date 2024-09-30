@@ -2,7 +2,7 @@
 
 .evenColumns {
   display: grid;
-  gap: var(--grid-gap);
+  gap: var(--grid-gap, 1rem);
   grid-template-columns: repeat(var(--columns, 4), 1fr); // Default to 4 columns
   justify-items: center;
   align-items: center;

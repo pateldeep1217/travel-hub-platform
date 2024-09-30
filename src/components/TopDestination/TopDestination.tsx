@@ -5,13 +5,13 @@ import styles from "./TopDestination.module.scss";
 
 function TopDestination() {
   return (
-    <section className={styles.destinations}>
+    <section>
       <Container className={styles.container}>
         <div className={styles.headings}>
           <h4>Top Selling</h4>
           <h2>Top Destinations</h2>
         </div>
-        <EvenColumns columns={3}>
+        <EvenColumns columns={3} gap="35px" className={styles.destinations}>
           <Destination
             name="Rome, Italy"
             price="$5k"

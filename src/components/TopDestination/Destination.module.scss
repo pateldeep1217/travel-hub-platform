@@ -1,7 +1,6 @@
 .destination {
   position: relative;
   margin-bottom: 2rem;
-  max-width: 314px;
 }
 
 .destinationInfo {
@@ -12,17 +11,22 @@
   border-bottom-left-radius: 24px;
   border-bottom-right-radius: 24px;
   padding: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Adjust values as needed
+  display: grid;
+  gap: 0.3rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 .details {
   display: flex;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
 }
 .destinationImg {
+  max-height: 400px;
 }
 
+.destinationName,
 .destinationPrice {
+  margin: 0;
 }
 
 .tripDetails {
@@ -30,4 +34,5 @@
   gap: 0.9rem;
   align-items: center;
   font-size: 0.8rem;
+  margin: 0.6rem;
 }
