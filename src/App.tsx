@@ -1,3 +1,4 @@
+import EasyandFast from "./components/EasyandFast/EasyandFast";
 import Header from "./components/Header";
 import Hero from "./components/Hero/Hero";
 import ServicesCategory from "./components/ServicesCategory";
@@ -10,49 +11,7 @@ function App() {
       <Hero />
       <ServicesCategory />
       <TopDestination />
-
-      <section id="easy-fast">
-        <h2>Easy and Fast</h2>
-        <h3>Book Your Next Trip in 3 Easy Steps</h3>
-        <div className="step">
-          <h4>Choose Destination</h4>
-          <p>
-            Select from a variety of exciting destinations. Whether it’s Greece
-            or Rome, start your journey by picking the perfect location.
-          </p>
-          <p>
-            Trip To Greece
-            <br />
-            14-29 June
-            <br />
-            by Robbin Joseph
-            <br />
-            Ongoing
-          </p>
-        </div>
-        <div className="step">
-          <h4>Make Payment</h4>
-          <p>
-            Complete your booking with our secure and easy payment options. This
-            step finalizes your reservation and secures your spot.
-          </p>
-          <p>
-            Trip to Rome
-            <br />
-            40% completed
-            <br />
-            24 people going
-          </p>
-        </div>
-        <div className="step">
-          <h4>Reach Airport on Selected Date</h4>
-          <p>
-            Arrive at the airport on your chosen date. Get ready to join fellow
-            travelers and start your adventure.
-          </p>
-        </div>
-      </section>
-
+      <EasyandFast />
       <section id="testimonials">
         <h2>Testimonials</h2>
         <blockquote>
