@@ -6,7 +6,7 @@ import styles from "./TopDestination.module.scss";
 function TopDestination() {
   return (
     <section>
-      <Container className={styles.container}>
+      <Container>
         <div className={styles.headings}>
           <h4>Top Selling</h4>
           <h2>Top Destinations</h2>
